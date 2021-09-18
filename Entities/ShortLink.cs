@@ -6,6 +6,10 @@ namespace minnak.Entities
 {
     public class ShortLink
     {
+        public ShortLink()
+        {
+            
+        }
         public ShortLink(string url)
         {
             Id = ShortId.Generate(options: new GenerationOptions{

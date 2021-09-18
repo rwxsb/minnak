@@ -20,14 +20,29 @@ namespace minnak.Controllers
         }
 
         [HttpPost("{url}")]
-        public async Task<string> Shorten(string url)
+        public async Task<ActionResult<string>> Shorten(string url,string? alias = null)
         {
-            var shortlink = new ShortLink(url);
+            // if(!Uri.IsWellFormedUriString(url,UriKind.Absolute))
+            //     return BadRequest("Invalid URL");
 
-            _collection.Insert(shortlink);
+            var existingURL =_collection.Find(sl => sl.Url == url).FirstOrDefault();
+            if(existingURL != null)
+                return $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{existingURL.Id}";
+
+
+
+            ShortLink shortLink;
+            if(String.IsNullOrWhiteSpace(alias))
+                shortLink = new ShortLink(url);
+            else
+                shortLink = new ShortLink{
+                    Id = alias,
+                    Url = url
+                };
             
-
-            var responseURI = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{shortlink.Id}";
+            _collection.Insert(shortLink);
+            
+            var responseURI = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{shortLink.Id}";
 
             return responseURI;
         }
