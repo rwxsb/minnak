@@ -1,9 +1,12 @@
+using System.ComponentModel.DataAnnotations;
 using LiteDB;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using minnak.Entities;
 
 namespace minnak.Controllers
 {
+
     [ApiController]
     [Route("api/URL/[Action]")]
     public class URLController : ControllerBase
@@ -19,32 +22,37 @@ namespace minnak.Controllers
   
         }
 
-        [HttpPost("{url}")]
-        public async Task<ActionResult<string>> Shorten(string url,string? alias = null)
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<ActionResult<string>> Shorten([Required]string url, string? alias = null)
         {
-            // if(!Uri.IsWellFormedUriString(url,UriKind.Absolute))
-            //     return BadRequest("Invalid URL");
+            if(!Uri.IsWellFormedUriString(url,UriKind.Absolute))
+                return BadRequest("Invalid URL");
 
             var existingURL =_collection.Find(sl => sl.Url == url).FirstOrDefault();
             if(existingURL != null)
-                return $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{existingURL.Id}";
+                return Ok($"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{existingURL.Id}");
 
+            var usedAlias = _collection.Find(sl=>sl.Id == alias);
+            if(usedAlias != null && !String.IsNullOrWhiteSpace(alias))
+                return BadRequest("Alias is used under domain");
 
 
             ShortLink shortLink;
             if(String.IsNullOrWhiteSpace(alias))
                 shortLink = new ShortLink(url);
-            else
+            else{
                 shortLink = new ShortLink{
                     Id = alias,
                     Url = url
                 };
+            }
             
             _collection.Insert(shortLink);
             
             var responseURI = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{shortLink.Id}";
 
-            return responseURI;
+            return Ok(responseURI);
         }
 
         

@@ -4,26 +4,45 @@
 <head>
     <title>Simple URL Shortener</title>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+        <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
+
+<style>
+    #shortenform{
+        display: flex;
+        flex-direction: column;
+
+    }
+    input{
+        border: 1px solid black;
+    }
+</style>
 
 <body>
     <main>
         <header>
-            <h1>Simple URL Shortener</h1>
-            <p>
-                Enter your URL below to retrieve the shortened version.
-            </p>
+            <h1>Minnak URL shortener</h1>
         </header>
         <section id="urlForm">
-            <form enctype="application/x-www-form-urlencoded" method="POST" action="/shorten">
+            <form id="shortenform" enctype="application/x-www-form-urlencoded">
                 <label for="url">
                     URL
                 </label>
-                <input type="url" name="url" />
-                <button type="submit">Shorten</button>
+                <input id="url" width="100%" type="url" name="url" />
+                <label for="alias">
+                    ALIAS
+                </label>
+                <input id="alias" width="100%" type="string" name="alias" />
+                <button id="submitbutton" type="submit">Shorten</button>
             </form>
+            <P id="urlResult"></P>
         </section>
     </main>
 </body>
+
+<script type="text/javascript" src="./index.js"></script> 
+
+
 
 </html>

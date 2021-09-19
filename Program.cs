@@ -22,7 +22,11 @@ if (builder.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "minnak v1"));
+    app.UseSwaggerUI(
+        c => {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "minnak v1");
+            c.RoutePrefix = "";
+        });
 }
 
 app.UseRouting();
@@ -49,6 +53,8 @@ app.UseEndpoints((endpoints) =>{
     });
 
 });
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
