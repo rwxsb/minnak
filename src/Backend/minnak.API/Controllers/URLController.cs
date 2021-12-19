@@ -36,7 +36,7 @@ namespace minnak.Controllers
             if(existingURL != null)
                 return Ok($"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{existingURL.Id}");
 
-            var usedAlias = _collection.Find(sl=>sl.Id == alias);
+            var usedAlias = _collection.Find(sl=>sl.Id == alias).FirstOrDefault();
             if(usedAlias != null && !String.IsNullOrWhiteSpace(alias))
                 return BadRequest("Alias is used under domain");
 
