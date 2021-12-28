@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LiteDB;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using minnak.Entities;
 
@@ -11,6 +12,7 @@ namespace minnak.Controllers
 {
 
     [ApiController]
+    [EnableCors("_myAllowSpecificOrigins")]
     [Route("api/URL/[Action]")]
     public class URLController : ControllerBase
     {
@@ -25,11 +27,14 @@ namespace minnak.Controllers
   
         }
 
+
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<string>> Shorten([Required]string url, string? alias = null)
         {
-            if(!Uri.IsWellFormedUriString(url,UriKind.Absolute))
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+
+            if (!Uri.IsWellFormedUriString(url,UriKind.Absolute))
                 return BadRequest("Invalid URL");
 
             var existingURL =_collection.Find(sl => sl.Url == url).FirstOrDefault();

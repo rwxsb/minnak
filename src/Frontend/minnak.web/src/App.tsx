@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import { request } from 'http';
+import { json } from 'stream/consumers';
 
 function App() {
   const [formData , setFormData] = useState({
@@ -16,14 +17,17 @@ function App() {
   const onSubmit = (e : any) => {
     e.preventDefault();
     console.log(formData);
-    axios.post("https://127.0.0.1:5001/api/URL/Shorten" ,formData )
-    .then((response) => {
-        console.log(response);
-        setResult(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+
+
+    fetch('https://localhost:5001/api/URL/Shorten?url=' + formData.url + '&alias=' + formData.alias ,
+            {
+                method: "POST"
+            })
+            .then((response: any) => response.text())
+            .then(resultURL => {
+              console.log(resultURL);
+              setResult({...result,resultURL});
+            });
 
   }
   return (
