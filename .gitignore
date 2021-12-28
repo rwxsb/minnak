@@ -3,3 +3,5 @@
 /obj
 .db
 /node_modules
+/src/Backend/minnak.API/obj
+/src/Backend/minnak.API/bin/Debug/net6.0
