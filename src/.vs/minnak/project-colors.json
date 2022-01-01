@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "63fc8e5d-d94d-4dd2-8ceb-54cfacf0a7ce": {
+      "ProjectGuid": "63fc8e5d-d94d-4dd2-8ceb-54cfacf0a7ce",
+      "DisplayName": "minnak",
+      "ColorIndex": 0
+    },
+    "a11f8700-a59c-4fc1-9d10-e22d96dd4677": {
+      "ProjectGuid": "a11f8700-a59c-4fc1-9d10-e22d96dd4677",
+      "DisplayName": "minnak.API",
+      "ColorIndex": 1
+    },
+    "9c777264-3e3b-4335-afac-d0feca2692bb": {
+      "ProjectGuid": "9c777264-3e3b-4335-afac-d0feca2692bb",
+      "DisplayName": "minnak.web",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "fd09b41b-0461-4f84-af22-93959af3cece": {
+      "ProjectGuid": "fd09b41b-0461-4f84-af22-93959af3cece",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 3
+    },
+    "839ec865-9dab-4f3a-a63d-db3d2f4043ea": {
+      "ProjectGuid": "839ec865-9dab-4f3a-a63d-db3d2f4043ea",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

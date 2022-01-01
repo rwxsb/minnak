@@ -1,0 +1,13 @@
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\minnak.API.exe
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\appsettings.Development.json
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\appsettings.json
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\minnak.API.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\minnak.API.deps.json
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\minnak.API.runtimeconfig.json
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\minnak.API.pdb
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\LiteDB.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\Microsoft.OpenApi.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\shortid.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\suhey\Desktop\minnak\src\minnak.API\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

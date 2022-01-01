@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  minnak.api:
+    image: ${DOCKER_REGISTRY-}minnakapi
+    build:
+      context: .
+      dockerfile: minnak.API/Dockerfile
+  minnak.web:
+    image: ${DOCKER_REGISTRY-}minnakweb
+    build:
+      context: .
+      dockerfile: minnak.web/Dockerfile

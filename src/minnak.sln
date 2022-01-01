@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minnak.API", "minnak.API\minnak.API.csproj", "{A11F8700-A59C-4FC1-9D10-E22D96DD4677}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "minnak.web", "minnak.web\minnak.web.esproj", "{9C777264-3E3B-4335-AFAC-D0FECA2692BB}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{839EC865-9DAB-4F3A-A63D-DB3D2F4043EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A11F8700-A59C-4FC1-9D10-E22D96DD4677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11F8700-A59C-4FC1-9D10-E22D96DD4677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11F8700-A59C-4FC1-9D10-E22D96DD4677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11F8700-A59C-4FC1-9D10-E22D96DD4677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C777264-3E3B-4335-AFAC-D0FECA2692BB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{839EC865-9DAB-4F3A-A63D-DB3D2F4043EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839EC865-9DAB-4F3A-A63D-DB3D2F4043EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839EC865-9DAB-4F3A-A63D-DB3D2F4043EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839EC865-9DAB-4F3A-A63D-DB3D2F4043EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E2D4A83-60C2-458D-9544-5BF4CC1751D7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "QICOr8zpmulLAhyv2k7qeRUyAM0zBkM8/ABvoQyoPB9loFHrd3EUo8LjLDjUorBnnX9FFD+nifzX3QHzXowFiA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\suhey\\Desktop\\minnak\\src\\minnak.API\\minnak.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\suhey\\.nuget\\packages\\litedb\\5.0.11\\litedb.5.0.11.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\shortid\\3.0.1\\shortid.3.0.1.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\suhey\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
