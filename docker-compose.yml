@@ -1,0 +1,19 @@
+version: '3.4'
+name: 'minnakurl'
+services:
+  minnakapi:
+    image: minnakapi
+    build:
+      context: .
+      dockerfile: src/minnak.API/Dockerfile
+    ports:
+      - 5000:5000
+  minnakweb:
+    image: minnakweb
+    build:
+      context: src/minnak.web
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
