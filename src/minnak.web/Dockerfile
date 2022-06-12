@@ -1,6 +1,6 @@
-FROM node: alpine
+FROM node:alpine
 # set working direction
-WORKDIR /app
+WORKDIR /WEB
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 # install application dependencies

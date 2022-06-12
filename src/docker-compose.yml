@@ -4,10 +4,11 @@ services:
   minnak.api:
     image: ${DOCKER_REGISTRY-}minnakapi
     build:
-      context: .
-      dockerfile: minnak.API/Dockerfile
+      context: minnak.API
+      dockerfile: Dockerfile
   minnak.web:
     image: ${DOCKER_REGISTRY-}minnakweb
     build:
-      context: .
-      dockerfile: minnak.web/Dockerfile
+      context: minnak.web
+      dockerfile: Dockerfile
+
