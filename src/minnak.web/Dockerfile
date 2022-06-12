@@ -1,13 +1,10 @@
-FROM node:alpine
-# set working direction
-WORKDIR /WEB
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-# install application dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm i
-# add app
-COPY . ./
-# start app
+FROM node:lts-alpine
+ENV NODE_ENV=production
+WORKDIR /usr/src/app
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --production --silent && mv node_modules ../
+COPY . .
+EXPOSE 3000
+RUN chown -R node /usr/src/app
+USER node
 CMD ["npm", "start"]

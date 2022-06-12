@@ -18,7 +18,7 @@ function App() {
     console.log(formData);
 
 
-    fetch('https://localhost:49153/api/URL/Shorten?url=' + formData.url + '&alias=' + formData.alias ,
+    fetch('http://localhost:5000/api/URL/Shorten?url=' + formData.url + '&alias=' + formData.alias ,
             {
                 method: "POST"
             })
